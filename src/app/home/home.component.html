@@ -1,0 +1,43 @@
+
+<ul id="slider" class="bxslider">
+  <li><img src="../assets/SliderImg/5.jpg" /></li>
+  <li><img src="../assets/SliderImg/6.jpg" /></li>
+  <li><img src="../assets/SliderImg/7.jpg" /></li>
+  <li><img src="../assets/SliderImg/8.jpg" /></li>
+  <li><img src="../assets/SliderImg/9.jpg" /></li>
+</ul>
+ 
+
+<section class="wrContent">
+  <h1 [innerHTML]="homeText?.title.rendered"></h1>
+  
+  <article id="colWR">
+  <div class="textCol" [innerHTML]="homeText?.content.rendered"></div>
+  </article>
+  
+  <img src="{{homeText?.better_featured_image.media_details.sizes.medium.source_url}}" alt="Padi logo" id="logo2" />
+  </section>
+
+<div class="plImg1">
+
+  
+</div>
+
+<div class="wrGray">
+  <div class="wrContent per">
+    <app-p-box class="pBoxWR" *ngFor="let pBox of p1Data" [pBox]="pBox"></app-p-box>
+  </div>
+</div>
+
+
+
+<section class="wrContent"><app-i-box class="iBoxWR" *ngFor="let iBox of i1Data" [iBox]="iBox"></app-i-box></section>
+
+<div class="plImg1"></div>
+
+<div class="wrGray">
+  <div class="wrContent per">
+    <app-p-box class="pBoxWR" *ngFor="let pBox of p2Data" [pBox]="pBox"></app-p-box>
+  </div>
+</div>
+

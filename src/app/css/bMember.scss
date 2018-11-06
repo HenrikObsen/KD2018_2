@@ -1,0 +1,40 @@
+//***************************** Bestyrelses member *****************************************
+
+
+.bMemberWR{
+    min-height: 280px; 
+    background-color:white;
+    text-align: center;
+    padding: 0 0 10px 0;
+    margin-bottom: 30px;
+    font-size: 14px;
+
+    @include respond-to(xsmall){       
+        h2{
+            font-size: 14px;
+        }
+        font-size: 10px;
+    }
+    @include respond-to(small){       
+        h2{
+            font-size: 18px;
+        }
+        font-size: 16px;
+    }
+    @include respond-to(medium){       
+        h2{
+            font-size: 18px;
+        }
+        font-size: 14px;
+    }
+    @include respond-to(large){       
+        h2{
+            font-size: 18px;
+        }
+    }
+    @include respond-to(xl){       
+        h2{
+            font-size: 18px;
+        }
+    }
+   }

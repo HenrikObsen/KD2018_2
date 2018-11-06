@@ -1,0 +1,87 @@
+@import '../Schared.scss';
+@import '../css/pBox.scss';
+@import '../css/iBox.scss';
+
+
+
+
+.bxslider{
+   
+    width:100%;
+    display: none;
+    
+    @include respond-to(small) { 
+        display: block; 
+        height: 300px;   
+     }
+
+     @include respond-to(medium) { 
+        display: block;   
+        height: 400px;  
+     }
+
+     @include respond-to(large) { 
+        display: block;      
+        height: 450px;   
+     }
+
+     @include respond-to(xl) { 
+        display: block;      
+        height: 500px;   
+     }
+}
+
+
+
+
+  #colWR{
+    width:100%;
+    float: left;
+
+    @include respond-to(small) { 
+        width:100%;
+        float: left;
+    }
+
+    @include respond-to(medium) { 
+        width:75%;
+        float: left;
+    }
+}
+
+
+  
+  //***************************** parelax *****************************************
+  .plImg1 {
+        @include paralax-box('../../assets/Backgrunds/back01.jpg',150px);
+        display: none;
+
+        @include respond-to(large){       
+                display: block;
+        }
+    } 
+
+  //***************************** Forside tekst + logo *****************************
+
+   
+
+    #logo2{
+        display:none;
+
+        @include respond-to(small) { 
+            display:none;
+        }
+
+        @include respond-to(medium) { 
+            width:20%;
+            float: right;
+            margin:10px 10px 60px 10px;
+            display:block;     
+        }
+    }
+ 
+
+ 
+
+    
+

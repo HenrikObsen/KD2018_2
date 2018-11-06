@@ -1,0 +1,41 @@
+<nav class="navbar">  
+
+  <div class="wrContent"> 
+      <div class="brand"><a routerLink="/home"><img id="flag" src="assets/Flag.png" alt="Logo" /></a></div>
+    <div class="brand-text"><a routerLink="/home">Kattegat Dykkerne</a></div>        
+
+        <div class="menu">
+            <ul id="desktopMenu">
+              <li routerLinkActive="active" class="mobileMenuItem"><a [routerLink]="['/home']">Home</a></li>
+              <li routerLinkActive="active" class="mobileMenuItem parent"><a routerLink="/omos">Om klubben</a>
+                <li routerLinkActive="active" class="mobileMenuItem parent"><a routerLink="/indmeldelse">Indmeldelse</a>
+             <!-- <ul class="submenu" style="display:none;">
+                <li><a routerLink="/omos">Om klubben</a></li>
+                <li><a routerLink="/bestyrelsen">Bestyrelsen</a></li>
+                <li><a [routerLink]="['/omos']">Bliv medlem</a></li>
+                <li><a [routerLink]="['/omos']">Sponsorer</a></li>
+                <li><a href="../assets/vedtaegter.pdf" target="_blank">Vedtægter</a></li>
+              </ul>-->
+              </li>
+              <li routerLinkActive="active" class="mobileMenuItem parent"><a routerLink="/aktiviteter">Aktiviteter</a>
+             <!-- <ul class="submenu" style="display:none;">
+                  <li>Svømmehal</li>
+                  <li>Uddannelse</li>
+                  <li>Klubaftner</li>
+                  
+                </ul>-->
+              </li>
+              <li routerLinkActive="active" class="mobileMenuItem"><a routerLink="/kontakt">Kontakt</a></li>
+            </ul>
+
+        <div id="toggleMenu" class="fa fa-bars"></div>
+      </div>      
+    </div>  
+</nav>
+
+  <router-outlet></router-outlet>
+
+<footer id="footer">        
+ <div class="wrContent"><div id="left">Kattegat Dykkerne, Skakkes Holm 20, 8500 Grenaa</div> <div id="right">Copyright © 2018 Kattegat Dykkerne</div></div>
+</footer>
+

@@ -1,0 +1,113 @@
+$gridSize: 12;
+$padding-Grid-xs: 8px;
+$padding-Grid-s: 12px;
+$padding-Grid-m: 15px;
+$padding-Grid-l: 20px;
+
+.row {
+    @extend %clearfix;
+
+    & + & {
+        margin-top: 3%;
+    }
+   // border: solid 1px red;
+}
+
+.content {
+    max-width: 1200px;
+    @extend .center;
+}
+
+
+%clearfix:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+[class^="col-"] {
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+   // border: solid 1px red;
+
+    @include respond-to(xsmall) {
+        padding-left: $padding-Grid-xs;
+        padding-right: $padding-Grid-xs;
+    }
+
+    @include respond-to(small) {
+        padding-left: $padding-Grid-s;
+        padding-right: $padding-Grid-s;
+    }
+
+    @include respond-to(medium) {
+        padding-left: $padding-Grid-m;
+        padding-right: $padding-Grid-m;
+    }
+
+    @include respond-to(large) {
+        padding-left: $padding-Grid-l;
+        padding-right: $padding-Grid-l;
+    }
+}
+    //----- Columns (Automatic)
+@include respond-to(xsmall) {
+
+    @for $i from 1 through $gridSize {
+        .col-xs-#{$i} {
+            width: (100% / $gridSize) * $i;
+        }
+    }
+}
+
+@include respond-to(small) {
+
+    @for $i from 1 through $gridSize {
+        .col-s-#{$i} {
+            width: (100% / $gridSize) * $i;
+        }
+    }
+}
+
+@include respond-to(medium) {
+
+    @for $i from 1 through $gridSize {
+        .col-m-#{$i} {
+            width: (100% / $gridSize) * $i;
+        }
+    }
+}
+
+@include respond-to(large) {
+
+    @for $i from 1 through $gridSize {
+        .col-l-#{$i} {
+            width: (100% / $gridSize) * $i;
+        }
+    }
+}
+    
+
+
+ /* <div class="row">    
+            <div class="content"> 
+                <div class="col-l-4 col-m-4 col-s-6 col-xs-12"> 
+                  1
+                </div>    
+                <div class="col-l-4 col-m-4 col-s-6 col-xs-12">
+                 1
+                 </div>    
+                <div class="col-l-4 col-m-4 col-s-6 col-xs-12">
+                  3
+                </div>            
+            </div>    
+    </div>*/

@@ -1,0 +1,56 @@
+@import '../Schared.scss';
+
+.colWR1{
+    @include col-wr(right, 65%);
+}
+.textCol{ 
+    @include text-coll(1,40px); 
+    
+    @include respond-to(small) { 
+        @include text-coll(2,40px); 
+     }
+  }
+
+  #image1{
+    display:none;
+    margin:20px 10px 10px 0px;
+    @include respond-to(small) { 
+        display:none;
+    }
+
+    @include respond-to(medium) { 
+        width:30%;
+        float: left;
+        margin:20px 10px 10px 0px;
+        display:block;     
+    }
+}
+
+.colWR2{
+    @include col-wr(left, 70%);
+}
+#image2{
+    display:none;
+    
+    @include respond-to(small) { 
+        display:none;
+    }
+
+    @include respond-to(medium) { 
+        width:25%;
+        float: right;
+        margin:10px 10px 10px 10px;
+        display:block;     
+    }
+}
+//***************************** parelax *****************************************
+.plImg1 {
+    @include paralax-box('../../assets/Backgrunds/back02.jpg',110px);
+    display: none;
+
+    @include respond-to(large){       
+            display: block;
+    }
+} 
+
+

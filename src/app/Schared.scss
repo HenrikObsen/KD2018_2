@@ -1,0 +1,121 @@
+@import 'Respond.scss';
+@import 'Grid.scss';
+$mainBlue: #69809c; 
+$lightBlue: #78879a; 
+$backGray: #ebeced;
+$headerColor: #61778c;
+
+    img{
+        width:100%;
+    }
+
+    .error{
+        color:red;
+    }
+
+  
+
+    h1 {
+        color:$headerColor;
+    }
+  
+    h2 {
+        color: $headerColor;
+        font-size: 18px;
+    }
+
+ 
+    @mixin col-wr($float, $mSize) {
+        width:100%;
+        float: $float;
+            
+        @include respond-to(small) { 
+            width:100%;
+            float: $float;
+        }
+    
+        @include respond-to(medium) { 
+            width:$mSize;
+            float: $float;
+        }
+    }
+
+    .wrContent {
+        margin-left:auto;
+        margin-right:auto;
+        width: calc(92% - 30px);
+        position: relative;
+        
+
+        &:after,&:before {
+            content: " ";
+            clear: both;
+            display: table;
+        }  
+
+        @include respond-to(small) { 
+            width: 730px;
+         }
+    
+         @include respond-to(medium) { 
+            width: 960px;
+            
+         }
+    
+         @include respond-to(large) { 
+            width: 1100px;
+           
+         }
+    
+         @include respond-to(xl) { 
+            width: 1100px;
+           
+         }
+    }
+    .wrSpacing{
+        padding: 80px 0 80px 0;
+    }
+    .wrGray {
+        background-color: $backGray;
+        width: 100%;
+        margin:0px 0px 0px 0px;
+        @extend .wrSpacing;
+    }
+
+    
+
+    @mixin text-coll($amount, $gap) {
+        
+        -webkit-column-count: $amount; /* Chrome, Safari, Opera */
+        -moz-column-count: $amount; /* Firefox */
+        column-count: $amount;
+        -webkit-column-gap: $gap; /* Chrome, Safari, Opera */
+        -moz-column-gap: $gap; /* Firefox */
+        column-gap: $gap;
+    }
+   
+    .textCol{ 
+        @include text-coll(1,40px); 
+
+        h2{
+            margin-top: 0;
+        }
+        
+        @include respond-to(small) { 
+            @include text-coll(2,40px); 
+         }
+      }
+
+      //***************************** parelax *****************************************
+
+    @mixin paralax-box($img, $size) {
+        background: url($img) no-repeat fixed center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        color: white;
+        padding: $size 0;        
+    }
+
+

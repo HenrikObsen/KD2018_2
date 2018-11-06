@@ -1,0 +1,52 @@
+//***************************** iBox *****************************************
+
+
+.iBoxWR{
+    display: table;
+    width: 100%;
+    min-height: 195px;   
+    float:left;    
+    margin: 30px 30px 30px 0 ;
+    background-color:white;
+    text-align: center;
+    &:last-of-type{
+        margin-right: 0;
+      
+      }
+
+    .iconBox{
+        display: table-cell;    
+        width: 50px;
+        height: 100%;
+        background: linear-gradient($mainBlue, #bac3ca);
+        color:white;
+        font-size: 28px;
+        padding-top: 10px;
+    }
+    .content{
+        padding:10px;
+        text-align: left;
+        display: table-cell;
+        width: calc(100%-50px);
+        background-color: $backGray;
+    }
+    p{
+        font-size: 12px;        
+    }   
+
+        @include respond-to(small) { 
+            width: calc(50% - 32px);
+            margin: 50px 30px 50px 0 ;
+         }
+    
+        
+    
+         @include respond-to(large) { 
+            width: calc(33% - 20px);       
+            margin: 100px 30px 100px 0 ;     
+         }
+    
+         @include respond-to(xl) { 
+           
+         }
+    }

@@ -1,0 +1,326 @@
+.row + .row {
+  margin-top: 3%;
+}
+
+.content {
+  max-width: 1200px;
+}
+
+.row:after {
+  display: block;
+  clear: both;
+  content: '';
+}
+
+.center, .content {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+[class^="col-"] {
+  float: left;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media (min-width: 0px) {
+  [class^="col-"] {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+@media (min-width: 768px) {
+  [class^="col-"] {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+@media (min-width: 992px) {
+  [class^="col-"] {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  [class^="col-"] {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: 0px) {
+  .col-xs-1 {
+    width: 8.33333%;
+  }
+  .col-xs-2 {
+    width: 16.66667%;
+  }
+  .col-xs-3 {
+    width: 25%;
+  }
+  .col-xs-4 {
+    width: 33.33333%;
+  }
+  .col-xs-5 {
+    width: 41.66667%;
+  }
+  .col-xs-6 {
+    width: 50%;
+  }
+  .col-xs-7 {
+    width: 58.33333%;
+  }
+  .col-xs-8 {
+    width: 66.66667%;
+  }
+  .col-xs-9 {
+    width: 75%;
+  }
+  .col-xs-10 {
+    width: 83.33333%;
+  }
+  .col-xs-11 {
+    width: 91.66667%;
+  }
+  .col-xs-12 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .col-s-1 {
+    width: 8.33333%;
+  }
+  .col-s-2 {
+    width: 16.66667%;
+  }
+  .col-s-3 {
+    width: 25%;
+  }
+  .col-s-4 {
+    width: 33.33333%;
+  }
+  .col-s-5 {
+    width: 41.66667%;
+  }
+  .col-s-6 {
+    width: 50%;
+  }
+  .col-s-7 {
+    width: 58.33333%;
+  }
+  .col-s-8 {
+    width: 66.66667%;
+  }
+  .col-s-9 {
+    width: 75%;
+  }
+  .col-s-10 {
+    width: 83.33333%;
+  }
+  .col-s-11 {
+    width: 91.66667%;
+  }
+  .col-s-12 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-m-1 {
+    width: 8.33333%;
+  }
+  .col-m-2 {
+    width: 16.66667%;
+  }
+  .col-m-3 {
+    width: 25%;
+  }
+  .col-m-4 {
+    width: 33.33333%;
+  }
+  .col-m-5 {
+    width: 41.66667%;
+  }
+  .col-m-6 {
+    width: 50%;
+  }
+  .col-m-7 {
+    width: 58.33333%;
+  }
+  .col-m-8 {
+    width: 66.66667%;
+  }
+  .col-m-9 {
+    width: 75%;
+  }
+  .col-m-10 {
+    width: 83.33333%;
+  }
+  .col-m-11 {
+    width: 91.66667%;
+  }
+  .col-m-12 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-l-1 {
+    width: 8.33333%;
+  }
+  .col-l-2 {
+    width: 16.66667%;
+  }
+  .col-l-3 {
+    width: 25%;
+  }
+  .col-l-4 {
+    width: 33.33333%;
+  }
+  .col-l-5 {
+    width: 41.66667%;
+  }
+  .col-l-6 {
+    width: 50%;
+  }
+  .col-l-7 {
+    width: 58.33333%;
+  }
+  .col-l-8 {
+    width: 66.66667%;
+  }
+  .col-l-9 {
+    width: 75%;
+  }
+  .col-l-10 {
+    width: 83.33333%;
+  }
+  .col-l-11 {
+    width: 91.66667%;
+  }
+  .col-l-12 {
+    width: 100%;
+  }
+}
+
+/* <div class="row">    
+            <div class="content"> 
+                <div class="col-l-4 col-m-4 col-s-6 col-xs-12"> 
+                  1
+                </div>    
+                <div class="col-l-4 col-m-4 col-s-6 col-xs-12">
+                 1
+                 </div>    
+                <div class="col-l-4 col-m-4 col-s-6 col-xs-12">
+                  3
+                </div>            
+            </div>    
+    </div>*/
+@font-face {
+  font-family: "Oswald Regular";
+  src: url("/fonts/Oswald-Regular.ttf") format("truetype");
+}
+
+img {
+  width: 100%;
+}
+
+.error {
+  color: red;
+}
+
+h1 {
+  color: #8c8e93;
+  font-weight: normal;
+  font-family: "Oswald Regular", arial;
+}
+
+h2 {
+  color: #8c8e93;
+  font-weight: normal;
+  font-size: 20px;
+  font-family: "Oswald Regular", arial;
+}
+
+.wrContent {
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(92% - 30px);
+  position: relative;
+}
+
+.wrContent:after, .wrContent:before {
+  content: " ";
+  clear: both;
+  display: table;
+}
+
+@media (min-width: 768px) {
+  .wrContent {
+    width: 730px;
+  }
+}
+
+@media (min-width: 992px) {
+  .wrContent {
+    width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .wrContent {
+    width: 1100px;
+  }
+}
+
+@media (min-width: 1550px) {
+  .wrContent {
+    width: 1100px;
+  }
+}
+
+.wrSpacing, .wrGray {
+  padding: 80px 0 80px 0;
+}
+
+.wrGray {
+  background-color: #ebeced;
+  width: 100%;
+  margin: 0px 0px 0px 0px;
+}
+
+.textCol {
+  font-size: 14px;
+  -webkit-column-count: 1;
+  /* Chrome, Safari, Opera */
+  /* Firefox */
+  column-count: 1;
+  -webkit-column-gap: 40px;
+  /* Chrome, Safari, Opera */
+  /* Firefox */
+  column-gap: 40px;
+}
+
+.textCol h2 {
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .textCol {
+    -webkit-column-count: 2;
+    /* Chrome, Safari, Opera */
+    /* Firefox */
+    column-count: 2;
+    -webkit-column-gap: 40px;
+    /* Chrome, Safari, Opera */
+    /* Firefox */
+    column-gap: 40px;
+  }
+}
+/*# sourceMappingURL=Schared.css.map */

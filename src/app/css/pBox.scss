@@ -1,0 +1,42 @@
+//***************************** pBox *****************************************
+
+
+.pBoxWR{
+    width: 100%;
+    float:left;
+    min-height: 280px;    
+    margin: 30px 30px 30px 0 ;
+    background-color:white;
+    text-align: center;
+    &:last-of-type{
+        margin-right: 0;
+      
+      }
+      
+    p{
+        font-size: 12px;
+        padding:10px;
+    }   
+
+    @include respond-to(small) { 
+        width: calc(50% - 30px);
+        margin: 50px 30px 50px 0 ; 
+     }
+
+
+     @include respond-to(large) { 
+        width: calc(25% - 23px);        
+        margin: 10px 30px 10px 0 ;    
+     }
+
+     @include respond-to(xl) { 
+        width: calc(25% - 23px);        
+        margin: 10px 30px 10px 0 ;
+        
+        
+        p{
+            font-size: 12px;
+            padding:10px;
+        }  
+     }
+}

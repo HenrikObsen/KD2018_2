@@ -1,0 +1,89 @@
+<section class="wrContent wrSpacing">
+                <h1 [innerHTML]="content[0]?.title.rendered"></h1>
+                <span [innerHTML]="content[0]?.content.rendered"></span>
+       </section>
+  <div class="plImg1"></div>
+  
+  <div class="wrGray">
+      <div class="wrContent per">
+            <form id="myForm" class="form" (ngSubmit)="onSubmit()" #f="ngForm">                 
+
+                    <div class="row">    
+                            <div class="content"> 
+                                <div class="col-l-4 col-m-4 col-s-12 col-xs-12"> 
+                                        <table>
+                                        <tr>                  
+                                                <td><label for="Type">Medlemstype:</label></td>                  
+                                                <td colspan="2">
+                                                <select id="Type" [(ngModel)]="Type" name="Type">
+                                                        <option selected="selected" value="800">Bassis medlem</option>
+                                                        <option value="400">Studie medlem</option>
+                                                        <option value="400">Uv-jæger</option>
+                                                        <option value="350">Junior</option>
+                                                        <option value="110">Børne/Unge</option>
+                                                </select>                                
+                                                </td>                  
+                                        </tr>     
+                                                     
+                                          <tr>                  
+                                            <td><label for="Svommehal">Svømmehal:</label></td>                  
+                                            <td><input type="checkbox" id="Svommehal" [(ngModel)]="Svommehal" name="Svommehal" value="300" /></td><td> +300,- kr årligt.</td>                  
+                                          </tr>
+                                          <tr>                  
+                                            <td><label for="Sortering">DSF-medlemskab:</label></td>                  
+                                            <td><input type="checkbox" id="DSF" [(ngModel)]="DSF" name="DSF" value="300"></td><td> +300,- kr årligt.</td>                  
+                                          </tr>  
+                                          <tr>                  
+                                                <td><label for="Sortering">Luftpåfyldning:</label></td>                  
+                                                <td><input type="checkbox" id="Luft" [(ngModel)]="Luft" name="Luft" value="400"></td><td> +400,- kr årligt.</td>                  
+                                        </tr>
+                                        <tr>
+                                                        <td colspan="3">&nbsp;</td>
+                                        </tr>  
+                                        <tr>
+                                                        <td colspan="3" class="resultwidth"><span class="msg">Dit medlemskab: {{ result }} kr. pr. år.</span></td>
+                                        </tr>                    
+                                        </table>                                           
+                                    
+                                        
+                                </div>    
+                                <div class="col-l-4 col-m-4 col-s-12 col-xs-12"> 
+                                        <label for="Fodselsdag">Fødselsdag & år:</label>
+                                        <input id="Fodselsdag" [(ngModel)]="Fodselsdag" name="Fodselsdag" type="text" required>                                                        
+                                                                        
+                                        <label for="Navn">Navn:</label>
+                                        <input id="Navn" [(ngModel)]="Navn" name="Navn" type="text" required>
+                                                               
+                                        <label for="Adresse">Adresse:</label>
+                                        <input id="Adresse" [(ngModel)]="Adresse" name="Adresse" type="text" required> 
+                                                       
+                                        <label for="Postnr">Postnr:</label>
+                                        <input id="Postnr" [(ngModel)]="Postnr" name="Postnr" type="text" required>
+
+                                </div>                                                        
+                                <div class="col-l-4 col-m-4 col-s-12 col-xs-12">
+                                        <label for="Bynavn">Bynavn:</label>
+                                        <input id="Bynavn" [(ngModel)]="Bynavn" name="Bynavn" type="text" required>
+
+                                        <label for="Tlf">Tlf:</label>
+                                        <input id="Tlf" [(ngModel)]="Tlf" name="Tlf" type="text" required>
+                                                        
+                                        <label for="Email">E-mail:</label>
+                                        <input id="Email" [(ngModel)]="Email" name="Email" type="text" required>   
+                                        <br/>
+                                        <br/>
+                                        <button type="submit" class="button" [disabled]="!f.valid">Send tilmelding</button>
+                                 </div>    
+                                          
+                            </div>    
+                    </div>
+           </form>
+           <div id="sendMSG">Din indmeldelse er nu sendt!!! <br/><i class="fa fa-check"></i></div>
+      </div>
+</div>
+
+    <div class="plImg1"></div>
+
+    <section class="wrContent">
+        <div class="textCol spacingTB"><span [innerHTML]="content[1]?.content.rendered"></span></div>
+    </section>
