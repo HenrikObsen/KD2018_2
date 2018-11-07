@@ -1,12 +1,12 @@
 <section class="bMemberWR">
-  <img width="150" src="../assets/Images/Bestyrelsen/{{member.image}}" />
+  <img width="150" src="{{member?.better_featured_image.media_details.sizes.thumbnail.source_url}}" />
 
   
-  <h2>{{member.titel}}</h2>
-  <b> {{member.navn}}</b><br/>
-    {{member.adresse}}<br/>
-    {{member.postnrBy}}<br/>
-    {{member.tlf}}<br/>
-  <a href="mailto:{{member.email}}">{{member.email}}</a> 
+  <h2>{{member.title.rendered}}</h2>
+  <b> {{member.acf.navn}}</b><br/>
+    {{member.acf.adresse}}<br/>
+    {{member.acf.post_nr}}<br/>
+    {{member.acf.tlf}}<br/>
+  <a href="mailto:{{member?.acf.mail}}">{{member?.acf.mail}}</a> 
   <br/>
 </section>

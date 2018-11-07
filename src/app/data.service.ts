@@ -13,7 +13,7 @@ export class DataService {
 
  
   private _url: string = "/assets/Data/"
-  private _pageUrl: string = "http://localhost/wp-json/wp/v2/"
+  private _pageUrl: string = "http://wp.kattegatdykkerne.dk/wp-json/wp/v2/"
 
   constructor(private http: HttpClient) { }
 

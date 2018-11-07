@@ -1,20 +1,12 @@
 
 <section class="wrContent wrSpacing">
-  <h1>Aktiviteter</h1>
+  <h1 [innerHTML]="aktivitet[0]?.title.rendered">Aktiviteter</h1>
 
     <div class="row">    
             <div class="content"> 
-                <div class="col-l-7 col-m-7 col-s-7 col-xs-12">  
-                  Takket være vores medlemmer har klubben et højt aktivitetsniveau. Hele sommeren er der ugentlige strand og bådture og det er næsten altid muligt at finde et par stykker der er med på en spontan dykkertur.
-                  <br><br>
-                  Flere gange om året tager vi på endagsture rundt i landet og dykke forskellige vrag, blandt andet Mariager fjord, Ærå sund færgen, Salling aquapark og mange flere steder.
-                  <br><br>
-                  Det er efter hånden også blevet tradition med en årlig tur til Tyskland og en til Norge hvor vi dykker på forskellige vrag fra anden verdenskrig.   
-                  <br><br>
-                  I klubben er også en række meget aktive uv-jægere. I sæsonen er der stort set nogen afsted hver dag og de deltager også aktivt i div. konkurrencer, enten som hold eller enkeltvis.
-                </div>    
+                <div class="col-l-7 col-m-7 col-s-7 col-xs-12" [innerHTML]="aktivitet[0]?.content.rendered"></div>    
                 <div class="col-l-5 col-m-5 col-s-5 col-xs-12">
-                    <img src="../assets/Images/rejse.jpg" alt="Bådtur" id="image3" />
+                    <img src="{{aktivitet[0]?.better_featured_image.media_details.sizes.medium.source_url}}" alt="Bådtur" id="image3" />
                 </div>                           
             </div>    
     </div>
@@ -24,21 +16,9 @@
   
   <div class="wrGray">
       <div class="wrContent per">
-      <img src="../assets/Images/Svommer.jpg" alt="Svømmehallen" id="image2" />
-      <h2>Svømmehal: </h2>
-      <p>Kattegat Dykkerne har svømmehallen 2 aftner om ugen, til undervisning og vedligeholdelse af uddannelse.
-      Svømmehallen ligger ved Grenaa Idrætscenter.<br/><br/>
-      Onsdage 20.00 til 22.00 (her deler vi bassin med Grenaa Svømmeklub) <br/>
-      Fredag 20.00 til 22.00 (her deler vi bassin med Grenaa Svømmeklub) <br/><br/>
-      Svømmesæsonen strækker sig fra september, til og med april </p>
-
-      <h2>Prøvedyk</h2>    
-      <p>
-    Vi kan tilbyde dig et prøvedyk i svømmehallen så du kan opleve at trække vejeret under vand men pas på, det er stærkt vanedannende.
-    <br/>
-    <br/>
-    Et prøvedyk koster 150 kr. og foregår onsdag aften mellem 20:00 og 22:00 Det kan aftales nærmere med Henrik Obsen via tlf: 42789605
-    </p>    
+      <img src="{{aktivitet[1]?.better_featured_image.media_details.sizes.medium.source_url}}" alt="Svømmehallen" id="image2" />
+      <h2 [innerHTML]="aktivitet[1]?.title.rendered"></h2>
+        <span [innerHTML]="aktivitet[1]?.content.rendered"></span>
    </div>
   </div>
   

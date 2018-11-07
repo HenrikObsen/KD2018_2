@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
   public p1Data;
   public p2Data;
   public i1Data;
+  public slides;
 
  public homeText;
  constructor(private _dataService: DataService) { }
@@ -30,6 +31,9 @@ export class HomeComponent implements OnInit {
       mode: 'fade',
       }
     );
+
+    this._dataService.getAll("Slider")
+    .subscribe(data => this.slides = data)
 
     this._dataService.getHomeText()
     .subscribe(data => this.homeText = data[0])

@@ -18,7 +18,7 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class IndmeldelseComponent implements OnInit {
  @ViewChild("f") test: NgForm;
- databasen = 'http://api.kattegatdykkerne.dk/api/Data/SendMail/'; 
+ databasen = 'http://kdapi.duser.net/api/Data/SendMail/'; 
 
   extractData: any;
   result: number = 0;
