@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { DataService } from '../data.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-aktiviteter',
@@ -11,15 +11,23 @@ export class AktiviteterComponent implements OnInit {
   public i1Data;
   public aktivitet;
 
- constructor(private _dataService: DataService) { }
+  constructor(private route: ActivatedRoute) { }
+  public content;
+  private DataFromResolver;
 
   ngOnInit() {
 
-    this._dataService.getAll("infobox?categories=9")
-    .subscribe(data => this.i1Data = data)
+    this.DataFromResolver = this.route.snapshot.data;
+    this.content = this.DataFromResolver.data;
+    this.i1Data = this.content[0];
+    this.aktivitet = this.content[1];
 
-    this._dataService.getAll("aktiviteter")
-    .subscribe(data => this.aktivitet = data)
+//    console.log(this.content);
+    // this._dataService.getAll("infobox?categories=9")
+    //   .subscribe(data => this.i1Data = data)
+
+    // this._dataService.getAll("aktiviteter")
+    //   .subscribe(data => this.aktivitet = data)
   }
 
 }

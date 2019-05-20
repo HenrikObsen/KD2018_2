@@ -1,10 +1,11 @@
 import { Component, OnInit, ViewEncapsulation, Injectable } from '@angular/core';
-import { DataService } from '../data.service';
+import { DataService } from '../_services/data.service';
 import { NgForm } from '@angular/forms';
-import { Mail } from '../models/Mail';
+import { Mail } from '../_models/mail';
 import { Http, Response } from '@angular/http';
 import { Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 declare var jquery:any;
 declare var $ :any;
@@ -55,7 +56,7 @@ export class KontaktComponent implements OnInit {
      this.sendMail(mail);  
     }
   
-    constructor(private http:Http, private _dataService: DataService) { }   
+    constructor(private http:Http, private _dataService: DataService, private route: ActivatedRoute) { }   
   
     sendMail(mail :Mail) {  
       //let headers = new Headers({ 'Content-Type': 'application/json' });    
@@ -85,13 +86,21 @@ export class KontaktComponent implements OnInit {
     
     }
 
+    public content;
+    private DataFromResolver;
   ngOnInit() {
 
-    this._dataService.getAll("infobox?categories=10")
-    .subscribe(data => this.i1Data = data)
+    this.DataFromResolver = this.route.snapshot.data;
+    this.content = this.DataFromResolver.data;
 
-    this._dataService.getAll("bestyrelsen")
-    .subscribe(data => this.bmData = data)
+    this.i1Data = this.content[0];
+    this.bmData = this.content[1];
+
+    //  this._dataService.getAll("infobox?categories=10")
+    //  .subscribe(data => this.i1Data = data)
+
+    //  this._dataService.getAll("bestyrelsen")
+    //  .subscribe(data => this.bmData = data)
   }
 
 }

@@ -15,6 +15,7 @@ import { OmOsComponent } from './om-os/om-os.component';
 import { AktiviteterComponent } from './aktiviteter/aktiviteter.component';
 import { IndmeldelseComponent } from './indmeldelse/indmeldelse.component';
 import { BMemberComponent } from './b-member/b-member.component';
+import { HnResolver } from './_resolvers/hn.resolver';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { BMemberComponent } from './b-member/b-member.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [HnResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

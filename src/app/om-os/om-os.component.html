@@ -1,10 +1,10 @@
 <section class="wrContent wrSpacing">
   <h1> Om Klubben</h1>
 
-  <img src="{{content[3]?.better_featured_image.media_details.sizes.medium.source_url}}" alt="klubhuset" id="image1" />
+  <img src="{{content[3].better_featured_image.media_details.sizes.medium.source_url}}" alt="klubhuset" id="image1" />
   <article class="colWR1">
-      <h2 [innerHTML]="content[3]?.title.rendered"></h2> 
-    <div class="textCol" [innerHTML]="content[3]?.content.rendered"></div>
+      <h2 [innerHTML]="content[3].title.rendered"></h2> 
+    <div class="textCol" [innerHTML]="content[3].content.rendered"></div>
   </article>
   
   </section>
@@ -13,12 +13,12 @@
   
   <div class="wrGray">
     <div class="wrContent per">
-        <img src="{{content[2]?.better_featured_image.media_details.sizes.medium.source_url}}" alt="DSF logo" id="image2" />
+        <img src="{{content[2].better_featured_image.media_details.sizes.medium.source_url}}" alt="DSF logo" id="image2" />
         
-        <div class="colWR2"><h2 [innerHTML]="content[2]?.title.rendered"></h2>
-        <span [innerHTML]="content[2]?.content.rendered"></span><br>
-        <div class="colWR2"><h2 [innerHTML]="content[1]?.title.rendered"></h2>
-        <span [innerHTML]="content[1]?.content.rendered"></span><br/>    
+        <div class="colWR2"><h2 [innerHTML]="content[2].title.rendered"></h2>
+        <span [innerHTML]="content[2].content.rendered"></span><br>
+        <div class="colWR2"><h2 [innerHTML]="content[1].title.rendered"></h2>
+        <span [innerHTML]="content[1].content.rendered"></span><br/>    
       </div>
     </div>
   </div>
@@ -28,8 +28,8 @@
   <section class="wrContent wrSpacing">
       
     <div class="colWR2">      
-      <h2 [innerHTML]="content[0]?.title.rendered"></h2>
-      <div class="textCol" [innerHTML]="content[0]?.content.rendered"></div>
+      <h2 [innerHTML]="content[0].title.rendered"></h2>
+      <div class="textCol" [innerHTML]="content[0].content.rendered"></div>
       <!--<img *ngIf="content[0]?.better_featured_image != null" src="{{content[0]?.better_featured_image.media_details.sizes.medium.source_url}}" alt="DSF logo" id="image2" /> --> 
     </div>     
   </section>

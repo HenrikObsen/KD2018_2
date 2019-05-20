@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service';
+import { DataService } from '../_services/data.service';
+import { Route, ActivatedRoute } from '@angular/router';
 declare var jquery:any;
 declare var $ :any;
 
@@ -10,13 +11,17 @@ declare var $ :any;
 })
 export class OmOsComponent implements OnInit {
 
-  
-  constructor(private _dataService: DataService) { }   
+  DataFromResolver;
+  constructor(private _dataService: DataService, private route: ActivatedRoute) { }   
   
   public content;
 
      ngOnInit(){
-      this._dataService.getAllOmContent()
-      .subscribe(data => this.content = data)
+
+      this.DataFromResolver = this.route.snapshot.data;
+      this.content = this.DataFromResolver.data;
+     
+      //this._dataService.getAllOmContent()
+      //.subscribe(data => this.content = data)
      }
 }
